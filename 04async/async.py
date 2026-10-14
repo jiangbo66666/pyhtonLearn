@@ -1,4 +1,4 @@
-import httpx, asyncio
+import httpx, asyncio, time
 
 
 async def test1():
@@ -65,5 +65,38 @@ async def maintest2():
     await asyncio.gather(*results)
     print("maintest")
 
+
+async def maintest3():
+    task = [asyncio.create_task(test1()), asyncio.create_task(test2())]
+
+    return await asyncio.gather(*task)
 # asyncio.run(maintest())
-asyncio.run(maintest2())
+# asyncio.run(maintest3())
+
+
+# 网络请求处理 代码尝试
+def getInfo():
+    res = httpx.get("https://www.baidu.com")
+    print(res.text)
+
+async def getInfoSync():
+    # AsyncClient() 只能在 async 函数中使用
+    async with httpx.AsyncClient() as client:
+        start = time.perf_counter()
+        res = await client.get("https://chat.baidu.com/aichat/longtask/list?taskType=1&token=ZDliYjVmN2J8fDE3OTE5NDY0MzU5NjF8ZmY1NGMxNzUwMDAwODI4Yg%3D%3D-ff54c1750000828b")
+        # res = await client.get("https://www.baidu.com")
+        # 兼容处理，如果返回的是json 就解析，如果不是 就返回文本
+        try: 
+            data = res.json()
+        except ValueError:
+            data = res.text
+        print(res.status_code, data)
+        end = time.perf_counter()
+        print(f"getInfoSync cost time {end - start:.3f} s")
+
+
+# getInfo()
+async def maintest4():
+    result = [asyncio.create_task(getInfoSync()), asyncio.create_task(test3())]
+    await asyncio.gather(*result)
+asyncio.run(maintest4())
