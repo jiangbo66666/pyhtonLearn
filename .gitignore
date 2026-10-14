@@ -1,0 +1,48 @@
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# Python 缓存与字节码
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 打包与构建产物
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# 测试与覆盖率
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+
+# 类型检查与 Lint 缓存
+.mypy_cache/
+.dmypy.json
+.ruff_cache/
+.pyre/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# 环境变量与本地配置
+.env
+.env.*
+!.env.example
+
+# 编辑器 / IDE
+.idea/
+.vscode/
+*.swp
+
+# 操作系统
+.DS_Store
+Thumbs.db

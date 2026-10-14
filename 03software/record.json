@@ -1,0 +1,21 @@
+{
+    "totalMoney": 11599,
+    "bills": [
+        {
+            "billMoney": 10,
+            "billRemark": "收入"
+        },
+        {
+            "billMoney": 923,
+            "billRemark": "as,mdk"
+        },
+        {
+            "billMoney": 8667,
+            "billRemark": "工资"
+        },
+        {
+            "billMoney": 1999,
+            "billRemark": "测试金额"
+        }
+    ]
+}

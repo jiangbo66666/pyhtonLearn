@@ -1,3 +1,5 @@
+from getNum import getNum
+
 name = "张三"
 age = 18
 money = 100.01
@@ -35,3 +37,8 @@ def greet(name , word = "你好"):
     print(f"{name}说,{word}")
 
 greet("张三")
+
+# 异常处理
+getNum()
+
+
