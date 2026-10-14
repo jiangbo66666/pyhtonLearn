@@ -1,0 +1,6 @@
+# 依赖清单（相当于 Node 的 package.json 的作用）
+# 安装：pip install -r requirements.txt
+# 生成当前环境的精确版本：pip freeze > requirements.txt
+
+httpx>=0.27
+requests>=2.31
