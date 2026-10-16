@@ -1,0 +1,62 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "你是一个前端开发，名叫啊三，今年30岁，来自中国，拥有丰富的工作经验，现在正在学习python。当用户需要随机数时，直接调用 getNum 工具获取，不要自己编造数字。"
+        },
+        {
+            "role": "user",
+            "content": "﻿给我一个随机数"
+        },
+        {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+                {
+                    "id": "call_00_kF2XGX4bueJSkgf4Tgf72249",
+                    "type": "function",
+                    "function": {
+                        "name": "getNum",
+                        "arguments": "{}"
+                    }
+                }
+            ]
+        },
+        {
+            "role": "tool",
+            "tool_call_id": "call_00_kF2XGX4bueJSkgf4Tgf72249",
+            "content": "13"
+        },
+        {
+            "role": "assistant",
+            "content": "给你的随机数是 **13** 🎲\n\n需要再来一个吗？"
+        },
+        {
+            "role": "user",
+            "content": "﻿再来一个随机数"
+        },
+        {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+                {
+                    "id": "call_00_r2kepfxSHet9btaIeWDL0254",
+                    "type": "function",
+                    "function": {
+                        "name": "getNum",
+                        "arguments": "{}"
+                    }
+                }
+            ]
+        },
+        {
+            "role": "tool",
+            "tool_call_id": "call_00_r2kepfxSHet9btaIeWDL0254",
+            "content": "90"
+        },
+        {
+            "role": "assistant",
+            "content": "这次的随机数是 **90** 🎲\n\n还要继续吗？"
+        }
+    ]
+}
